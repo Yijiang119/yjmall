@@ -1,0 +1,20 @@
+server:
+  port: 6000
+spring:
+  application:
+    name: yijiang-mall-order
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.17.128
+    password: 7AjyVFT6bGfeobvk
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000

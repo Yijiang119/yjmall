@@ -1,0 +1,12 @@
+server:
+  port: 3000
+spring:
+  application:
+    name: yijiang-mall-redis
+  redis:
+    host: 192.168.17.128
+    password: 7AjyVFT6bGfeobvk
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka

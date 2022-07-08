@@ -1,0 +1,30 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: yijiang-mall-pay
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.17.128
+    password: 7AjyVFT6bGfeobvk
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+ali:
+  pay:
+    ali-pay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkpRrSmqmom5aGIVTd+z51UTqvMo076wPBLJpK2zkMeO5u8ODiICBUZh3biwBQW+PqZ53ihQnmpczT3Xnky2ZQY63vw0njlrJSkSEwadD+UYu3x4UpQ1h4/9NjeAl8VGNRJO8LvWj8KztXwwymBpxpQ0idHwxE+cHXIOQ30yVZM4L2bpBKUdnxwYjsMT9bjfe6/vsV5qFKmFMv4tZU4mcW2JzIabbTR9senx/rdJ/japhQTXQwsKJaf3utr1iRrjxPRcOZI4hWZkFN+oenrNDO5QdP1OuvaeFDnIB8KnyeuWF91f8XItf432B1+O4smrV0zevldISNCZQ5Y0i95YAbwIDAQAB
+    app-id: 2021000119653662
+    charset: utf-8
+    gateway-url: https://openapi.alipaydev.com/gateway.do
+    merchant-private-key: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCOvaCUy4n176qc2F1vwq1UutJPFJY+Bh8iWJa10ETo5wn40syN+OGcROWz4PF8PGSzl51+nRTPzrmjrpFBfA5Hlba7xjXGCFgcUakJ4HhsZcEcfRgeIJKLOLxTJZXW4ZJIxM8VJRm+78Wi4Ppc6caB/ZjrUmQZP8g1ZLpjZlsknoLroX5tNK0GwWdV/WQu+0/wq7ATLWlqCJHvu8ZK7YaI2+yMe9cwTVTOuUzRcqasoYFb6FUFUMx/tpDoYsqsY/SnIdoWuxWKW1mHidgmOHfi89hhCyrOQe+iVr9qBaOXvcG/sTOLzgYZ2ZXZPwGap3epD+fpLYaLj/A27+cvDXrzAgMBAAECggEAGbPpq4FvKTrr1Oxc/tfmUECHyDejyi1eA9hB4yFKl0mrEQQcU2BCd9osJpTVxxI06+XcNUVhzv2hjejMPSdyhs9dpThOzIcKHqdRsfaamKJGALRB2ILzAGDKAIrfDV928OWHiH4ywZ/5TZgHXR23YgbhN1aRsb47denaajWvKcufOTIrW6Ow4cxytAYvCcvEuvrxHFQYw009kwEd1b4Shbu1kTztOesA1uHhX+yn8wJyo9AnaAgP7Br3B7sITcXI41bE6DKRUpPm/yT3ksHlV8YkdiGPmmDWLLdhXAZ2ul5EjM0WupgGbES8W29z7aLgRjMEeLvpVQEHZ7i1lekaKQKBgQDlS0SJSvEwqv1MOU03atF6+1SLKV8SvfLf3MxZ4pdrDzixe2Q06q/tN64q5sbcCj4RamfUqwmgowVYGoXcDXfDVJJvaT7O36OVb5aEYOEZqr8JLcOmt3fS7Ugnb+u37GuKfkk9mH/IP1Ugnj/XQ+0JLS+uzwJM50WWMnG0PHU3PwKBgQCfXaX8ctSlACuzfuUrcYRYfSr5oTdq9+FaV4OGjP/qPG+5j2wNomQj425OwrCnTbY0N3dzWr6+nLM8hTCaABWA7vP7AJ/tnRb25dGOpt/AD/+c41yQY+uoygWtGOM3S4C/z9nF15DGH4UHsso/gmEDwJfcsfJuZrIqczZCE3HjTQKBgA29R9sOMYugA1OI73aNoQXEf5ljHj5KQX5mhZwxNq+ElvoTkbqWAXquZnJNp8bRmkyC2rvkj8wfWJeh5zl7WRzMOYYRgWD2B6BRsmw2PebC03WiV2HrBnQOIc+zJiW8NelzjcHyHF4MZXZx5RNqD48INR49az7ecM4CMcwB/2gTAoGAMhIrZ7DwjNML5/6TpF2rNl5FVV9I2Sv+uvLKGUlN0tugQs4EJhiCnCAF9WsIM9ifybIvrqexTJRRYE98oLYsC3GIaLGejfqQT4yPleFqZZ7hMfrhh2BNl5+5vtQV97aaQindA2MiUo1ur6eGEgQ11Qb679VdFUDg86N1Rbd0TfUCgYEAyQw0wXFGNoXLloGYfURXw3tHDjaP5a5QGDdRtZQEWrO26QZ6KqfQx5Oukb6jMVQqpiR8ZtvFRz/+uHNc67mfNCgSbuo7YL0jv6aKS3bfA7yILGuInV95WPzNML1WsUkB1lhIkXxOuj06l5loKSauuHNTPcRdqSGrsAU4v+7tdl8=
+    notify-url: http://37v6up.natappfree.cc /pay/notify
+    return-url: http://localhost/pay/return
+    sign-type: RSA2

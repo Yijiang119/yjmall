@@ -1,0 +1,27 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: yijiang-mall-project
+  redis:
+    host: 192.168.17.128
+    password: 7AjyVFT6bGfeobvk
+  session:
+    store-type: redis
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+aliyun:
+  oss:
+    access-key-id: LTAI5tMerFEZrqPfgVg8MT7V
+    access-key-secret: LlZUCkKiQe9DoW5OCVrRhVQwjBkl7P
+    bucket-domain: https://jzh-yjmall.oss-cn-beijing.aliyuncs.com
+    bucket-name: jzh-yjmall
+    end-point: https://oss-cn-beijing.aliyuncs.com

@@ -1,0 +1,45 @@
+server:
+  port: 80
+spring:
+  application:
+    name: yijiang-mall-zuul
+  redis:
+    host: 192.168.17.128
+    password: 7AjyVFT6bGfeobvk
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+zuul:
+  ignored-services: "*"
+  sensitive-headers: "*" # 在 Zuul 向其他微服务重定向时保持原本头信息（请求头、响应头）
+  routes:
+    mall-portal:
+      service-id: yijiang-mall-auth
+      path: /** # 这里一定要使用两个“*”号，不然“/”路径后面的多层路径将无法访问
+    mall-project:
+      service-id: yijiang-mall-project
+      path: /project/** # 这里一定要使用两个“*”号，不然“/”路径后面的多层路径将无法访问
+    mall-order:
+      service-id: yijiang-mall-order
+      path: /order/**
+    mall-pay:
+      service-id: yijiang-mall-pay
+      path: /pay/**
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 15000
+
+
