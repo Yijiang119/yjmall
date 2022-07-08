@@ -20,8 +20,8 @@ ribbon:
   ConnectTimeout: 10000
 aliyun:
   oss:
-    access-key-id: LTAI5tMerFEZrqPfgVg8MT7V
-    access-key-secret: LlZUCkKiQe9DoW5OCVrRhVQwjBkl7P
+    access-key-id: 
+    access-key-secret: 
     bucket-domain: https://jzh-yjmall.oss-cn-beijing.aliyuncs.com
     bucket-name: jzh-yjmall
     end-point: https://oss-cn-beijing.aliyuncs.com
